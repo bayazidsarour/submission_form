@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="./valorant 1.png" alt="Image 1">
+            <img src="./image2.png" alt="Image 2">
+          </div>
+          <div class="slide">
+            <img src="./valorant 1.png" alt="Image 3">
+            <img src="./image2.png" alt="Image 4">
+          </div>
+          <!-- Add more slides as needed -->
+        </div>
+        <button class="arrow left-arrow">&#10094;</button>
+        <button class="arrow right-arrow">&#10095;</button>
+      </div>
+      
+
+
+
+
+    <script>
+const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+let currentIndex = 0;
+
+const updateSlider = () => {
+  const slideWidth = slide[0].offsetWidth;
+  slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+};
+
+rightArrow.addEventListener('click', () => {
+  if (currentIndex < slide.length - 1) {
+    currentIndex++;
+    updateSlider();
+  }
+});
+
+leftArrow.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlider();
+  }
+});
+
+    </script>
+</body>
+</html>

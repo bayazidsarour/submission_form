@@ -1,0 +1,57 @@
+/* Slider container */
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Optional: for visibility */
+  }
+  
+  /* Slides wrapper */
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Individual slide */
+  .slide {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+    justify-content: space-between;
+  }
+  
+  /* Images */
+  .slide img {
+    width: 49%; /* Adjust spacing between images */
+    border-radius: 5px; /* Optional: for better aesthetics */
+    height: 400px;
+  }
+  
+  /* Navigation buttons */
+  .arrow {
+    position: absolute;
+    bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 18px;
+  }
+  
+  .left-arrow {
+    right: 60px; /* Adjust position */
+  }
+  
+  .right-arrow {
+    right: 20px; /* Adjust position */
+  }
+  
+  /* Hover effect on buttons */
+  .arrow:hover {
+    background-color: #555;
+  }
+  
